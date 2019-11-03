@@ -7,7 +7,7 @@ while(scanf("%lld",&n)==1)
 for(loop=0;loop<n;loop++)
     {
     scanf("%lld%lld",&a,&b);
-    if((a < 1000000001) && (b< 1000000001))
+    if((a < 1000000001) && (b< 1000000001)) //limits the input data
         {
             if(a>b)
             printf(">\n");
