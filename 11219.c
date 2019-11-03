@@ -2,7 +2,7 @@
 int main()
 {
 
-int loop,n,year,y1,y2,m1,m2,d1,d2;          //loop for looping while loop; year is difference between in put years; n is the number of inputs you will take//
+int loop,n,year,y1,y2,m1,m2,d1,d2;          //loop for looping while loop; year is difference between input years; n is the number of inputs you will take//
 
 scanf("%d",&n);
 
