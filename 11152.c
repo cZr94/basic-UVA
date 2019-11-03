@@ -22,7 +22,7 @@ int main ()
 
         rose=pi*(pow(radius,2));
 
-        violate=triangle-rose;
+        violate=triangle-rose;                      // to get the the area of triangle with a circle inside that triangle//
 
         area=(a*b*c)/(4*triangle);                  //area of the circle with the triangle inside
 
