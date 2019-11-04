@@ -9,7 +9,7 @@ int main()
         if(n>20)                            //if test case number is higher than 20 then break/ end the compile
             break;
         data=0;
-        for(loop=1;loop<=n;loop++)          //using for loop where loop starts from 0 and contineus until its equal or less than the number of test cases
+        for(loop=1;loop<=n;loop++)          //using for loop where loop starts from 1 and contineus until its equal or less than the number of test cases
         {
             scanf("%d %d %d",&inputA,&inputB,&inputC); // taking multiple inputs
 
