@@ -1,75 +1,36 @@
-#include<stdio.h>
-#include<stdlib.h>
+#include <stdio.h>
 
 int main()
 {
-    long long t,n,arr[100010],casecnt,loop,max,k,dif;
+    int t, n, test = 0;
+    scanf("%d", &t);
+    while(t--) {
+        scanf("%d", &n);
+        int arr[100001] = {}, loop;
+        for(loop = 1; loop <= n; loop++)
+            scanf("%d", arr+loop);
 
-    casecnt=1;
-    scanf("%lld",&t);
-    while(t--)
-    {
-        arr[0]=0;
-        scanf("%lld",&n);
-
-        for(loop=1;loop<=n;loop++)
+        int temp = 0, data;
+        for(loop = 1; loop <= n; loop++)
         {
-            scanf("%lld",&arr[loop]);
-            if(n==1)
-            {
-                printf("Case %lld: %lld\n",casecnt,arr[loop]);
+            if(arr[loop]-arr[loop-1] > temp)
+                temp = arr[loop]-arr[loop-1];
+        }
 
+        data = temp;
+
+        for(loop = 1; loop <= n; loop++)
+        {
+            if(arr[loop]-arr[loop-1] == temp)
+                temp--;
+            else if(arr[loop]-arr[loop-1] > temp)
+            {
+                data++;
+                break;
             }
-        }
-        if(n>1)
-            {
-                max=0;
-
-                for(loop=0;loop<n-1;loop++)
-                {
-                    dif=abs(arr[loop]-arr[loop+1]);
-                    if(dif>max)
-                        max=dif;
-                }
-                k=max;
-
-                for(loop=0;loop<n-1;loop++)
-                {
-                    if(loop==0)
-                    {
-                        if(arr[0]>max)
-                        {
-                            k++;
-                            max=k;
-                            loop=-1;
-                            continue;
-                        }
-                        if(arr[0]==max)
-                            max--;
-                    }
-
-                    dif=abs(arr[loop]-arr[loop+1]);
-                    if(dif>max)
-                    {
-                        k++;
-                        max=k;
-                        loop=-1;
-                        continue;
-                    }
-                    if(dif==max)
-                        max--;
-
-                }
-
-             printf("Case %lld: %lld\n",casecnt,k);
-             casecnt++;
 
         }
-
-
-
+        printf("Case %d: %d\n", ++test, data);
     }
-
-        return 0;
-
+    return 0;
 }
