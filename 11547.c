@@ -8,7 +8,7 @@ int main()
     scanf("%d",&t);
     while(t--)
     {
-        if(t>100 || t<0)
+        if(t>100 || t<0)            ///if test case 't' is less than 0 or greater than 100 then break
             break;
         scanf("%d",&n);
 
