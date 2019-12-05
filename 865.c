@@ -15,7 +15,7 @@ int main()
 		char ASCII[128];
 
 		int lenA = strlen(A);
-        int lenB = strlen(B);
+        	int lenB = strlen(B);
 
 		for(loop = 0; loop < 128; loop++)
 			ASCII[loop] = loop;
