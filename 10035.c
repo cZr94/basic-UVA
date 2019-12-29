@@ -9,7 +9,7 @@ int main()
     {
         if(inputA==0 && inputB==0)
             break;
-
+        
             carry=0;
 
         for(loop=0;;loop++)
